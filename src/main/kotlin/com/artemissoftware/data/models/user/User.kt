@@ -1,4 +1,4 @@
-package com.artemissoftware.data.models
+package com.artemissoftware.data.models.user
 
 import org.bson.codecs.pojo.annotations.BsonId
 import org.bson.types.ObjectId
