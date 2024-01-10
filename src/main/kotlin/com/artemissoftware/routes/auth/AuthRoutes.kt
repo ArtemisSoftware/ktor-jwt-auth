@@ -25,14 +25,9 @@ fun Route.signUp(
 ) {
     post("signup") {
 
-//        val request = kotlin.runCatching {
-//            call.receiveNullable<AuthRequest>()
-//        }.getOrNull() ?: kotlin.run {
-//            call.respond(HttpStatusCode.BadRequest)
-//            return@post
-//        }
-
-        val request = call.receiveOrNull<AuthRequest>() ?: kotlin.run {
+        val request = kotlin.runCatching {
+            call.receiveNullable<AuthRequest>()
+        }.getOrNull() ?: kotlin.run {
             call.respond(HttpStatusCode.BadRequest)
             return@post
         }
